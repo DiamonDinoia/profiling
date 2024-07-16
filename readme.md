@@ -35,5 +35,6 @@ make -j
 
 ### 4. Run the project
 ```bash
+cd bin
 ./main
 ```
