@@ -15,7 +15,7 @@ if (NOT FFTW_FOUND)
                     "ENABLE_AVX2 ON"
                     "BUILD_TESTS OFF"
                     "BUILD_SHARED_LIBS OFF"
-                    "ENABLE_THREADS OFF"
+                    "ENABLE_THREADS ON"
                     "ENABLE_OPENMP OFF"
                 URL "http://www.fftw.org/fftw-${FFTW_VERSION}.tar.gz"
                 URL_HASH "MD5=8ccbf6a5ea78a16dbc3e1306e234cc5c"
@@ -30,7 +30,7 @@ if (NOT FFTW_FOUND)
                     "BUILD_TESTS OFF"
                     "BUILD_SHARED_LIBS OFF"
                     "ENABLE_FLOAT ON"
-                    "ENABLE_THREADS OFF"
+                    "ENABLE_THREADS ON"
                     "ENABLE_OPENMP OFF"
                 URL "http://www.fftw.org/fftw-${FFTW_VERSION}.tar.gz"
                 URL_HASH "MD5=8ccbf6a5ea78a16dbc3e1306e234cc5c"
@@ -39,5 +39,7 @@ if (NOT FFTW_FOUND)
         )
         set(FFTW_LIBRARIES fftw3 fftw3f)
 else ()
-    set(FFTW_LIBRARIES "FFTW::Float" "FFTW::Double")
+    set(FFTW_LIBRARIES "FFTW::Float" "FFTW::Double" "FFTW::FloatThreads" "FFTW::DoubleThreads")
 endif ()
+
+message(STATUS "FFTW_LIBRARIES: ${FFTW_LIBRARIES}")
