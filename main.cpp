@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+// we are using the gperftools profiler to profile our code and it is baked into our code
+// it is not the standard way of using it but I do prefer it this way
 #include "gperftools/profiler.h"
 
 #define cimg_use_fftw3
@@ -91,6 +93,7 @@ CImg<unsigned char> edgeDetection(const CImg<unsigned char>& image, float cutoff
 }
 
 int main(const int argc, const char **argv) {
+    // Start the profiler to profile the code with a file named 'sample.prof'
     ProfilerStart("sample.prof");
     // Load the image
     const char *image_path = "input.png";
