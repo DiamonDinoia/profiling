@@ -1,13 +1,14 @@
 # Profiling workshop instructions
 
 ### 1a. Flatiron machine modules
+```bash
 module load modules/2.3-20240529
 module load cmake
 module load gcc/11
 module load perf-linux
 module load gperftools/2.15
 module load fftw
-
+```
 ### 1b. Install dependencies on your local machine
 ```bash
 pprof https://pypi.org/project/pprof/
