@@ -29,7 +29,7 @@ git clone https://github.com/DiamonDinoia/profiling.git
 
 ### 3. Build the project
 ```bash
-mkdir buid && cd build
+mkdir build && cd build
 cmake ..  # ignore  note: gperftools' cmake support is incomplete and is best-effort only
 make -j
 ```
